@@ -1,0 +1,218 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+/*#scaleSlider{
+    vertical-align: 10px;
+    width: 100px;
+    margin-left: 90px;
+}*/
+
+body{
+    margin: 80px;
+    background-image: url("../images/bk.jpg");
+}
+
+h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff914;
+}
+h3{
+    /*margin-top: 5px;
+    margin-bottom: 5px;
+    margin-left: 13px;*/
+    margin: 5px 5px 13px;
+    text-transform: uppercase;
+    color: #fff914;
+}
+h4{
+    margin-left: 15px;
+    text-transform: uppercase;
+    color: #fff914;
+}
+#enregistrer,#charge{
+
+   margin: 10px;
+
+}
+
+label,input{
+    display:block;
+}
+#divPrincipal{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+   /* border: 2px solid rgba(142, 18, 16, 0.64);*/
+    border-radius: 15px ;
+    /*  border-style: double;
+    border-style: groove;
+    border-style: ridge;
+    border-style: inset;
+    border-style: outset;*/
+}
+
+#canvas{
+    cursor: crosshair;
+}
+
+#selectedImage{
+
+    margin-bottom: 10px;
+    margin-left: 13px;
+    position: relative;
+    text-align: right;
+    -moz-opacity:0 ;
+    filter:alpha(opacity: 0);
+
+
+}
+
+
+#imagesDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+#imageSauver{
+    width: 400px;
+    height: 400px;
+}
+
+#controls{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+fieldset{
+    border:  1px solid #ff6259;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: rgba(12, 196, 157, 0.2);
+}
+legend{
+    color: #50e6f5;
+    text-transform: uppercase;
+}
+fieldset:nth-child(2){
+    
+}
+
+#edition{
+
+    border-radius: 5px ;
+    width: 400px;
+    color: #fff914;
+    text-transform: uppercase;
+
+
+
+}
+
+#finalisation{
+    background-color: rgba(12, 196, 157, 0.2);
+    border-radius: 5px ;
+    margin: 5px;
+
+    height: 50px;
+
+}
+#divCanvas{
+    margin: 100px;
+}
+
+button{
+    border: 1px solid #0a3c59;
+    background: #3e779d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+    background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
+    background: -moz-linear-gradient(top, #65a9d7, #3e779d);
+    background: -ms-linear-gradient(top, #65a9d7, #3e779d);
+    background: -o-linear-gradient(top, #65a9d7, #3e779d);
+    background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
+    padding: 2px 4px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    -webkit-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    -moz-box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    box-shadow: rgba(255,255,255,0.4) 0 0px 0, inset rgba(255,255,255,0.4) 0 1px 0;
+    text-shadow: #7ea4bd 0 1px 0;
+    color: #06426c;
+    font-size: 23px;
+    font-family: helvetica, serif;
+    text-decoration: none;
+    vertical-align: middle;
+}
+button:hover{
+    border: 1px solid #0a3c59;
+    text-shadow: #1e4158 0 1px 0;
+    background: #3e779d;
+    background: -webkit-gradient(linear, left top, left bottom, from(#65a9d7), to(#3e779d));
+    background: -webkit-linear-gradient(top, #65a9d7, #3e779d);
+    background: -moz-linear-gradient(top, #65a9d7, #3e779d);
+    background: -ms-linear-gradient(top, #65a9d7, #3e779d);
+    background: -o-linear-gradient(top, #65a9d7, #3e779d);
+    background-image: -ms-linear-gradient(top, #65a9d7 0%, #3e779d 100%);
+    color: #fff;
+}
+button:active{
+    text-shadow: #1e4158 0 1px 0;
+    border: 1px solid #0a3c59;
+    background: #65a9d7;
+    background: -webkit-gradient(linear, left top, left bottom, from(#3e779d), to(#3e779d));
+    background: -webkit-linear-gradient(top, #3e779d, #65a9d7);
+    background: -moz-linear-gradient(top, #3e779d, #65a9d7);
+    background: -ms-linear-gradient(top, #3e779d, #65a9d7);
+    background: -o-linear-gradient(top, #3e779d, #65a9d7);
+    background-image: -ms-linear-gradient(top, #3e779d 0%, #65a9d7 100%);
+    color: #fff;
+}
+#progressBar {
+    width: 400px;
+    height: 22px;
+    border: 1px solid #111;
+    background-color: #292929;
+}
+#progressBar div {
+    height: 100%;
+    color: #fff;
+    text-align: right;
+    line-height: 22px; /* same as #progressBar height if we want text middle aligned */
+    width: 0;
+    background-color: #0099ff;
+}
+
+
+
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+#output{
+    margin-top: 40px;
+
+}
