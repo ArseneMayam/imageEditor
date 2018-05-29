@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Image Editor</title>
+    <link rel="stylesheet" type="text/css" href="style/main.css">
+</head>
+<body>
+<header>
+    <div id="insert">
+        <h1>Image Editor</h1>
+        <input id="selectedImage" type="file"/>
+    </div>
+</header>
+<main>
+    <div id="divPrincipal">
+        <div id="divCanvas">
+            <canvas id="canvas" width="800" height="520">
+                Your browser does not support the HTML5 canvas tag.
+            </canvas>
+        </div>
+
+        <div id="controls">
+
+            <div id="edition">
+                <h3>Edition</h3>
+                <fieldset>
+                    <legend>Scale</legend>
+                    <!--<output id="scaleOutput">1.0</output>-->
+                    <label for="scaleSlider">Scale</label>
+                    <input type="range" id="scaleSlider" min="1" max="10.0" step="0.1" value="1.0">
+                    <button id="blackwhite">black white</button>
+                    <button id="filterColor">Original</button>
+                    <button id="negativeColor"> Negative Color</button>
+                    <button id="clip">clip</button>
+
+                </fieldset>
+                <form action="">
+                    <fieldset>
+                        <legend>Effets</legend>
+                        <label for="opaciteRange">Opacité</label>
+                        <input type="range" id="opaciteRange" name="opacite" min="1" max="100.0" step="0.1" value="1.0">
+
+                        <label for="saturationRange">Saturation</label>
+                        <input type="range" id="saturationRange" name="opacite" min="1" max="100.0" step="3"
+                               value="1.0">
+
+                        <label for="blurRange"> Blur</label>
+                        <input type="range" id="blurRange" min="1" max="10.0" step="1.0" value="1.0">
+
+                        <label for="contrastRange">Contrast</label>
+                        <input type="range" id="contrastRange" min="1" max="200.0" step="1.0" value="1.0">
+
+                        <label for="hueRange">Hue-rotate</label>
+                        <input type="range" id="hueRange" min="1" max="100.0" step="1.0" value="1.0">
+
+                        <label for="ombreRange">Ombre</label>
+                        <input type="range" id="ombreRange" min="1" max="100.0" step="1.0" value="1.0">
+
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Text</legend>
+                        <label for="textInput">Saisie text</label>
+                        <input type="text" id="textInput" width="50">
+                        <label for="textColor">Couleur</label>
+                        <input type="color" id="textColor"/><br/>
+                        <label for="police">Police</label>
+                        <select name="Police" id="police">
+                            <option value="3">3</option>
+                            <option value="6">6</option>
+                            <option value="11">11</option>
+                            <option value="12">12</option>
+                            <option value="13">13</option>
+                            <option value="14">14</option>
+                            <option value="15">15</option>
+                            <option value="20">20</option>
+                            <option value="30">30</option>
+                            <option value="40">40</option>
+                            <option value="50">50</option>
+                            <option value="60">60</option>
+                            <option value="70">70</option>
+                            <option value="80">80</option>
+                            <option value="90">90</option>
+                            <option value="100">100</option>
+                        </select>
+                        <label for="fontfamily">Font Family</label>
+                        <select name="fontfamily" id="fontfamily">
+                            <option value="Arial">Arial</option>
+                            <option value="Verdana">Verdana</option>
+                            <option value="Times New Roman">Times New Roman</option>
+                            <option value="Courier New">Courier New</option>
+                            <option value="Serif">Serif</option>
+                            <option value="sans-serif">sans-Serif</option>
+                        </select>
+                        <label for="fontweight">Font Weight</label>
+                        <select name="fontweight" id="fontweight">
+                            <option value="normal">normal</option>
+                            <option value="bold">bold</option>
+                            <option value="bolder">bolder</option>
+                            <option value="lighter">lighter</option>
+                        </select>
+
+                    </fieldset>
+                    <fieldset>
+                        <legend>Caméra</legend>
+                        <label>Pendre une photo</label>
+                        <button id="bttnPhoto">photo</button>
+                    </fieldset>
+                </form>
+
+            </div>
+            <div id="finalisation">
+                <button id="enregistrer"> Enregistrer</button>
+                <div id="progressBar">
+                    <div></div>
+                </div>
+                <button id="charge">Charger</button>
+            </div>
+        </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Modal content -->
+        <div class="modal-content">
+            <p>Some text in the Modal..</p>
+        </div>
+    </div>
+
+    <div id="output">
+        <h3>Filtres</h3>
+        <div id="imagesDiv">
+        </div>
+    </div>
+    <div id="imageSauver">
+        <img src="" id="test64image">
+    </div>
+</main>
+<footer>
+</footer>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.js"></script>
+<script src="script/main.js"></script>
+</body>
+</html>
